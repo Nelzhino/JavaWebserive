@@ -1,0 +1,3 @@
+co\com\buscador\service\BuscadorService.class
+co\com\buscador\rest\BuscadorRestWS.class
+co\com\buscador\dto\BuscadorDto.class
