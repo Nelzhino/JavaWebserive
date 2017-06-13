@@ -23,7 +23,7 @@ public class BuscadorRestWS {
 
 	private final String UTF8 = ";charset=utf-8";
 	
-	
+	// Metodo que permite capturar peticiones para busqueda en google.
 	@POST
 	@Path("/getListado")
 	@Consumes(MediaType.APPLICATION_JSON + UTF8)
@@ -33,11 +33,5 @@ public class BuscadorRestWS {
 		
 		return buscadorService.getResultGoogle(buscadorDto);
 	}
-	
-	@GET
-	@Path("/holamundo")
-	public void holaMundo(){
-		System.out.println("dsalksjdlksa");
-	}
-	
+
 }
