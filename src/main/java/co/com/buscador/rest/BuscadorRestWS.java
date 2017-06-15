@@ -18,7 +18,7 @@ import co.com.buscador.service.BuscadorService;
  *
  */
 
-@Path("/buscador")
+@Path("/services")
 public class BuscadorRestWS {
 
 	private final String UTF8 = ";charset=utf-8";

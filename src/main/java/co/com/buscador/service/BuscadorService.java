@@ -26,6 +26,7 @@ import co.com.buscador.dto.BuscadorDto;
  */
 public class BuscadorService {
 
+	private static final String CACHE = "&sa=U&ved=0";
 	private static final String GOOGLE = "https://www.google.com.co/search";
 	private static final String H3_A_HREF = "//h3/a/@href";
 	private final static String URL_SEARCH = "/url?q=";
@@ -74,7 +75,8 @@ public class BuscadorService {
 				for (DomAttr object : list) {
 					String url = object.getValue();
 					if (url.contains(URL_SEARCH) && cont!=3) {
-						urls.add(url.substring(URL_SEARCH.length()));
+						String resultado = url.substring(URL_SEARCH.length());
+						urls.add(resultado.substring(0, resultado.indexOf(CACHE)));
 						cont++;
 					}
 				}
